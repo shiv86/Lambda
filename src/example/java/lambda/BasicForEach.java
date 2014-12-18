@@ -57,6 +57,14 @@ public class BasicForEach {
 		});
 	}
 
+	/*
+	 * Lambda Expression Lifecycle: Think of a lambda expression as having two
+	 * stage lifecycle: >Convert the lambda expression to a function >Call the
+	 * generated function
+	 * 
+	 * Note the function/method generated must have the same signature as the
+	 * method in the functional interface.
+	 */
 	private static void basicForEach() {
 		System.out.println("basicForEach");
 		integers.forEach(x -> System.out.println(x));

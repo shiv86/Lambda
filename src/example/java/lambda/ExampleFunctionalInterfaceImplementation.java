@@ -6,6 +6,13 @@ import java.util.function.Consumer;
 
 public class ExampleFunctionalInterfaceImplementation {
 
+	/*
+	 * Lambda Definition: 1. Define anonymous functions 2. Can be assigned to
+	 * variables which are of type functional interface 3. Can be passed to
+	 * functions e.g. for each accepts the Consumer Functional Interface 4. Can
+	 * be returned to function
+	 */
+
 	static List<String> alphabet = Arrays.asList("A", "B", "C", "D", "E");
 
 	public static void main(String... args) {
@@ -27,6 +34,10 @@ public class ExampleFunctionalInterfaceImplementation {
 		 * interface that the lambda expression in assigned to.
 		 */
 		System.out.println("consumerFunctionalInterface");
+
+		// Assigning a Lambda to a local variable, where the type of the Lambda
+		// expression must be the same as the functional interface that the
+		// lambda expression is assigned to.
 		Consumer<String> consumer = x -> System.out.println(x);
 		alphabet.forEach(consumer);
 	}
@@ -53,9 +64,9 @@ public class ExampleFunctionalInterfaceImplementation {
 	 * implementation provided in the interface and is inherited by classes that
 	 * implement the interface.
 	 * 
-	 * It can be overrriden, if two interfaces have the same method signature and name
-	 * there will be a compile time error, in an inheritance hierarchy with default methods
-	 * the most specific default method wins
+	 * It can be overrriden, if two interfaces have the same method signature
+	 * and name there will be a compile time error, in an inheritance hierarchy
+	 * with default methods the most specific default method wins
 	 */
 	private static void useCustomDefaultMethod() {
 		System.out.println("useCustomDefaultMethod");
